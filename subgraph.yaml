@@ -16,15 +16,13 @@ dataSources:
       entities:
         - AdminChanged
         - BeaconUpgraded
-        - Upgraded
       abis:
-        - name: avalaunchstaking
-          file: ./abis/avalaunchstaking.json
+        - name: XavaStakingContract
+          file: ./abis/XavaStakingContract.json
       eventHandlers:
-        - event: AdminChanged(address,address)
-          handler: handleAdminChanged
-        - event: BeaconUpgraded(indexed address)
-          handler: handleBeaconUpgraded
-        - event: Upgraded(indexed address)
-          handler: handleUpgraded
-      file: ./src/avalaunchstaking.ts
+        - event: Deposit(indexed address,indexed uint256,uint256)
+          handler: handleDeposit
+        - event: Withdraw(indexed address,indexed uint256,uint256)
+          handler: handleWithdraw
+      file: ./src/xava-staking-contract.ts
+        - Upgraded
