@@ -1,0 +1,30 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: avalaunchstaking
+    network: avalanche
+    source:
+      address: "0xA6A01f4b494243d84cf8030d982D7EeB2AeCd329"
+      abi: avalaunchstaking
+      startBlock: 32589264
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AdminChanged
+        - BeaconUpgraded
+        - Upgraded
+      abis:
+        - name: avalaunchstaking
+          file: ./abis/avalaunchstaking.json
+      eventHandlers:
+        - event: AdminChanged(address,address)
+          handler: handleAdminChanged
+        - event: BeaconUpgraded(indexed address)
+          handler: handleBeaconUpgraded
+        - event: Upgraded(indexed address)
+          handler: handleUpgraded
+      file: ./src/avalaunchstaking.ts
