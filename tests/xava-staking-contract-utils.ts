@@ -4,7 +4,7 @@ import {
   AdminChanged,
   BeaconUpgraded,
   Upgraded
-} from "../generated/avalaunchstaking/avalaunchstaking"
+} from "../generated/XavaStakingContract/XavaStakingContract"
 
 export function createAdminChangedEvent(
   previousAdmin: Address,

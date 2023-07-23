@@ -1,0 +1,18 @@
+type Deposit @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  amount: BigInt!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Withdraw @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  amount: BigInt!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+

@@ -8,9 +8,9 @@ import {
 } from "matchstick-as/assembly/index"
 import { Address } from "@graphprotocol/graph-ts"
 import { AdminChanged } from "../generated/schema"
-import { AdminChanged as AdminChangedEvent } from "../generated/avalaunchstaking/avalaunchstaking"
-import { handleAdminChanged } from "../src/avalaunchstaking"
-import { createAdminChangedEvent } from "./avalaunchstaking-utils"
+import { AdminChanged as AdminChangedEvent } from "../generated/XavaStakingContract/XavaStakingContract"
+import { handleAdminChanged } from "../src/xava-staking-contract"
+import { createAdminChangedEvent } from "./xava-staking-contract-utils"
 
 // Tests structure (matchstick-as >=0.5.0)
 // https://thegraph.com/docs/en/developer/matchstick/#tests-structure-0-5-0
