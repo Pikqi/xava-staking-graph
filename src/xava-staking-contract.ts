@@ -4,8 +4,6 @@ import {
 } from "../generated/XavaStakingContract/XavaStakingContract";
 import { Deposit, Withdraw } from "../generated/schema";
 
-import { BigInt, Bytes } from "@graphprotocol/graph-ts";
-
 export function handleDeposit(event: DepositedEvent): void {
 	let entity = new Deposit(
 		event.transaction.hash.concatI32(event.logIndex.toI32())
