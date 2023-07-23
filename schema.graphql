@@ -16,3 +16,13 @@ type Withdraw @entity(immutable: true) {
   transactionHash: Bytes!
 }
 
+type Staking @entity(immutable: false) {
+  id: Bytes!
+  user: Bytes! # address
+  amount: BigInt!
+  deposit: BigInt!
+  withdraw: BigInt!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
